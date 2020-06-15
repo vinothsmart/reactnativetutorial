@@ -5,7 +5,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-
+        <Text style={styles.boldText}>Hello, World</Text>
       </View>
     </View>
   );
@@ -21,5 +21,8 @@ const styles = StyleSheet.create({
   header:{
     backgroundColor: 'pink',
     padding: 20,
+  },
+  boldText:{
+    fontWeight: 'bold'
   }
 });
