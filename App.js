@@ -52,8 +52,8 @@ export default function App() {
     <View style={styles.container}>
       { people.map((item) => {
         return(
-          <View>
-            <Text>{item.name}</Text>
+          <View key={item.key}>
+            <Text style={styles.item}>{item.name}</Text>
           </View>
         )
       })}
@@ -80,4 +80,10 @@ const styles = StyleSheet.create({
   //   margin: 10,
   //   width: 200,
   // }
+  item: {
+    marginTop: 24,
+    padding: 30,
+    backgroundColor: 'pink',
+    fontSize: 24
+  }
 });
