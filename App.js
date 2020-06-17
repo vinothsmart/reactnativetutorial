@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Button, TextInput, ListView } from 'react-native';
+import { StyleSheet, Text, View, Button, TextInput, ScrollView} from 'react-native';
 
 export default function App() {
 
@@ -50,13 +50,15 @@ export default function App() {
     //   </Text>
     // </View>
     <View style={styles.container}>
-      { people.map((item) => {
-        return(
-          <View key={item.key}>
-            <Text style={styles.item}>{item.name}</Text>
-          </View>
-        )
-      })}
+      <ScrollView>
+        { people.map((item) => {
+          return(
+            <View key={item.key}>
+              <Text style={styles.item}>{item.name}</Text>
+            </View>
+          )
+        })}
+      </ScrollView>
     </View>
   );
 }
