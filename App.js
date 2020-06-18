@@ -20,13 +20,13 @@ export default function App() {
   // }
 
   const [people, setPeople] = useState([
-    { name: "vinoth", key: "1" },
-    { name: "kanna", key: "2" },
-    { name: "ajitha", key: "3" },
-    { name: "vignesh", key: "4" },
-    { name: "anand", key: "5" },
-    { name: "vivek", key: "6" },
-    { name: "kali", key: "7" },
+    { name: "vinoth", id: "1" },
+    { name: "kanna", id: "2" },
+    { name: "ajitha", id: "3" },
+    { name: "vignesh", id: "4" },
+    { name: "anand", id: "5" },
+    { name: "vivek", id: "6" },
+    { name: "kali", id: "7" },
   ]);
 
   return (
