@@ -7,6 +7,7 @@ import {
   TextInput,
   ScrollView,
   FlatList,
+  TouchableOpacity,
 } from "react-native";
 
 export default function App() {
@@ -28,6 +29,10 @@ export default function App() {
     { name: "vivek", id: "6" },
     { name: "kali", id: "7" },
   ]);
+
+  const pressHandler = (id) => {
+    console.log(id);
+  }
 
   return (
     // <View style={styles.container}>
@@ -59,9 +64,13 @@ export default function App() {
     <View style={styles.container}>
       <FlatList
         numColumns={2}
-        keyExtractor={(item)=> item.id}
+        keyExtractor={(item) => item.id}
         data={people}
-        renderItem={({ item }) => <Text style={styles.item}>{item.name}</Text>}
+        renderItem={({ item }) => (
+          <TouchableOpacity onPress={()=> pressHandler(item.id)}>
+            <Text style={styles.item}>{item.name}</Text>
+          </TouchableOpacity>
+        )}
       />
       {/* <ScrollView>
         { people.map(item => (
@@ -98,7 +107,7 @@ const styles = StyleSheet.create({
     padding: 30,
     backgroundColor: "pink",
     fontSize: 24,
-    marginHorizontal:10,
-    marginTop: 24
+    marginHorizontal: 10,
+    marginTop: 24,
   },
 });
